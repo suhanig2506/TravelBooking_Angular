@@ -1,0 +1,56 @@
+<p>view-travelreq works!</p>
+
+<table class="table table-primary" >
+    <tr>
+        <td>Request Id</td>
+        <td>Loc From</td>
+        <td>Loc To</td>
+        <td>Approve Staus</td>
+        <td>Booking Status</td>
+        <td>Current Status</td>
+        <td>Request Date</td>
+        <td>Detail</td>
+        <td>Delete</td>
+        <td>Edit</td>
+        <td>Action</td>
+        <td>Action</td>
+    </tr>
+    <tr *ngFor="let g of lsttravel;">
+        <td>{{g.requestId}}</td>
+        <td>{{g.locFrom}}</td>
+        <td>{{g.locTo}}</td>
+        <td>{{g.approvalStatus}}</td>
+        <td>{{g.bookingStatus}}</td>
+        <td>{{g.currentStatus}}</td>
+        <td>{{g.reqDate}}</td>
+        <td><a [routerLink]="['/detailT/',g.requestId]">Details</a></td>
+        <td><a [routerLink]="['/deleteT/',g.requestId]">Delete</a></td>
+        <td><a *ngIf="g.currentStatus=='Open';else elseold" [routerLink]="['/editT/',g.requestId]">Edit</a>
+            <ng-template #elseold>
+                Blocked
+              </ng-template>
+        </td>
+
+        <td ><a *ngIf="g.approvalStatus=='Pending'; else elseBlock" [routerLink]="['/approve/',g.requestId]">Approve</a>
+            <ng-template #elseBlock>
+                Approved
+              </ng-template>
+        </td>
+
+        <td><a *ngIf="g.approvalStatus=='Approve' && g.bookingStatus=='Pending';else elsenew" [routerLink]="['/book/',g.requestId]">Book</a>
+            <ng-template #elsenew>
+                Booked
+              </ng-template>
+        </td>
+       
+        
+    </tr> 
+    <tr *ngIf="!lsttravel || lsttravel.length==0">
+        <td colspan="3">No req to Display</td>
+    </tr>
+    
+
+</table>
+<!-- <button (click)="getTravelById()">Refresh List</button> -->
+
+

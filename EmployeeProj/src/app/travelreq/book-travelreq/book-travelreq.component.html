@@ -1,0 +1,81 @@
+<p>booktravelrequest works!</p>
+ 
+ 
+ 
+ 
+<h2>Approve Travel Request</h2>
+<div class="container">
+    <div class="row">
+        <div class="form-bg">
+            <form #bookTravelrequestForm="ngForm" (ngSubmit)="bookTravelrequest()">
+                <div class="panel panel primary">
+                    <div class="panel-heading"><hr/>
+                        <h3 class="panel-title">Book Travel Request</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="empId">Employee Id</label>
+                            <input readonly id="empId" class="form-control" name="empId" [(ngModel)]="newTravelrequest.empId" required #empId="ngModel">
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="locFrom">locFrom</label>
+                            <input readonly id="locFrom" class="form-control" #locFrom="ngModel" name="locFrom" [(ngModel)]="newTravelrequest.locFrom" required maxlength="10" minlength="2">
+                            <div *ngIf="locFrom?.invalid && (locFrom?.dirty || locFrom?.touched)" class="alert alert-danger">
+                                Invalid Location
+                                <div *ngIf="locFrom.errors?.['required']">Location is required.</div>
+                                <div *ngIf="locFrom.errors?.['minlength']">Location Length is Minimum</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="locTo">locTo</label>
+                            <input readonly id="locTo" class="form-control" #locTo="ngModel" name="locTo" [(ngModel)]="newTravelrequest.locTo" required maxlength="10" minlength="2">
+                            <div *ngIf="locTo?.invalid && (locTo?.dirty || locTo?.touched)" class="alert alert-danger">
+                                Invalid Location
+                                <div *ngIf="locTo.errors?.['required']">Location is required.</div>
+                 ss               <div *ngIf="locTo.errors?.['minlength']">Location Length is Minimum</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reqDate">Request Date</label>
+                            <input readonly id="reqDate" class="form-control" name="reqDate" [(ngModel)]="newTravelrequest.reqDate" required #reqDate="ngModel">
+                        </div> -->
+ 
+                        <!--<div class="form-group">
+                            <label for="book">Booking Status</label>
+                            <input id="bookingStatus" class="form-control" name="bookingStatus" [(ngModel)]="newTravelrequest.bookingStatus" required #bookingStatus="ngModel">
+                        </div>-->
+ 
+                        <div class="form-group">
+                            <label class="radio-inline" for="bookingStatus">Booked</label>
+                            <input id="bookingStatus" value="Booked" name="bookingStatus" type="radio" [(ngModel)]="newTravelrequest.bookingStatus"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="radio-inline" for="bookingStatus">Not Booked</label>
+                            <input id="bookingStatus" value="NotBooked" name="bookingStatus" type="radio" [(ngModel)]="newTravelrequest.bookingStatus"/>
+                        </div><br/>
+ 
+                       
+                        <br/>
+                        <div class="panel-footer">
+                            <button class="btn btn-primary" [disabled]="bookTravelrequestForm.invalid" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form> <hr/><br/>
+        </div>
+    </div>
+</div>
+ 
+<div>
+    Location From: {{newTravelrequest.locFrom}}
+    Valid: {{bookTravelrequestForm.valid}}<br/>
+    Touched: {{bookTravelrequestForm.touched}}<br/>
+    Dirty: {{bookTravelrequestForm.dirty}}<br/>
+</div>
+ 
+<div>
+    Location To: {{newTravelrequest.locTo}}
+    Valid: {{bookTravelrequestForm.valid}}<br/>
+    Touched: {{bookTravelrequestForm.touched}}<br/>
+    Dirty: {{bookTravelrequestForm.dirty}}<br/>
+</div>

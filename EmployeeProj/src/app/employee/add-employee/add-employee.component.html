@@ -1,0 +1,62 @@
+<p>add-Employee works!</p>
+<div class="container">
+    <div class="row">
+        <div class="form-bg">
+            
+             <form #addempForm="ngForm" (ngSubmit)="addemp(addempForm)">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Add Employee</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="empId">Emp Id</label>
+                            <input id="empId" class="form-control"
+                            name="empId" [(ngModel)]="newEmp.empId">
+                        </div>
+                        <div class="form-group">
+                            <label for="empFirstName">Emp FName</label>
+                            <input id="empFirstName" class="form-control"
+                            name="empFirstName" [(ngModel)]="newEmp.empFirstName">
+                        </div>
+                        <div class="form-group">
+                            <label for="empLastName">Emp LName</label>
+                            <input id="empLastName" class="form-control"
+                            name="empLastName" [(ngModel)]="newEmp.empLastName">
+                        </div>
+                        <div class="form-group">
+                            <label for="empDob">Emp Dob</label>
+                            <input id="empDob" class="form-control"
+                            name="empDob" [(ngModel)]="newEmp.empDob">
+                        </div>
+                        <div class="form-group">
+                            <label for="empAddress">Emp Address</label>
+                            <input id="empAddress" class="form-control"
+                            name="empAddress" [(ngModel)]="newEmp.empAddress">
+                        </div>
+                        <div class="form-group">
+                            <label for="empContact">Emp Contact</label>
+                            <input id="empContact" class="form-control"
+                            name="empContact" [(ngModel)]="newEmp.empContact">
+                        </div>
+
+                        
+                        <br/>
+                        <div class="panel-footer">
+                            <button class="btn btn-primary" type="submit" [disabled]="addempForm.invalid">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form><hr/>
+        </div>
+    </div>
+</div>
+<hr/>
+<!-- <div>
+    Genre Code :{{newGenre.genreCode}}
+    Valid :{{addGenreForm.valid}}<br/>
+    Touched:{{addGenreForm.touched}}<br/>
+    Dirty:{{addGenreForm.dirty}}
+</div> -->
+<hr/>
+

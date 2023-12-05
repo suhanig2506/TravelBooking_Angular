@@ -1,0 +1,76 @@
+<p>edit-travelreq works!</p>
+<p>add-travelreq works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="form-bg">
+            
+             <form #edittravelForm="ngForm" (ngSubmit)="edittravel()">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Edit TravelRequest</h3>
+                    </div>
+                    <div class="panel-body">
+                        <!-- <div class="form-group">
+                            <label for="requestId">Request Id</label>
+                            <input id="requestId" class="form-control"
+                            name="requestId" [(ngModel)]="newTravel.requestId">
+                        </div> -->
+                        <div class="form-group">
+                            <label for="empId">Emp Id</label>
+                            <input id="empId" class="form-control"
+                            name="empId" [(ngModel)]="thisTravel.empId">
+                        </div>
+                        <div class="form-group">
+                            <label for="locFrom">Location From</label>
+                            <input id="locFrom" class="form-control"
+                            name="locFrom" [(ngModel)]="thisTravel.locFrom">
+                        </div>
+                        <div class="form-group">
+                            <label for="locTo">Location To</label>
+                            <input id="locTo" class="form-control"
+                            name="locTo" [(ngModel)]="thisTravel.locTo">
+                        </div>
+                        <div class="form-group">
+                            <label for="approvalStatus">Approve Status</label>
+                            <input id="approvalStatus" class="form-control"
+                            name="approvalStatus" [(ngModel)]="thisTravel.approvalStatus">
+                        </div>
+                        <div class="form-group">
+                            <label for="bookingStatus">Booking Status</label>
+                            <input id="bookingStatus" class="form-control"
+                            name="bookingStatus" [(ngModel)]="thisTravel.bookingStatus">
+                        </div>
+                        <div class="form-group">
+                            <label for="currentStatus">Current Status</label>
+                            <input id="currentStatus" class="form-control"
+                            name="currentStatus" [(ngModel)]="thisTravel.currentStatus">
+                        </div>
+                        <div class="form-group">
+                            <label for="reqDate">Req Date</label>
+                            <input id="reqDate" class="form-control"
+                            name="reqDate" [(ngModel)]="thisTravel.reqDate">
+                        </div>
+
+                        
+                        <br/>
+                        <div class="panel-footer">
+                            <button class="btn btn-primary" type="submit" [disabled]="edittravelForm.invalid">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form><hr/>
+        </div>
+    </div>
+</div>
+<hr/>
+<!-- <div>
+    Genre Code :{{newGenre.genreCode}}
+    Valid :{{addGenreForm.valid}}<br/>
+    Touched:{{addGenreForm.touched}}<br/>
+    Dirty:{{addGenreForm.dirty}}
+</div> -->
+<hr/>
+
+
+

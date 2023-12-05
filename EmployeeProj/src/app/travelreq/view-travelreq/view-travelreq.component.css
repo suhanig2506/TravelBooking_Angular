@@ -1,0 +1,51 @@
+/* Overall styling for the view-travelreq component */
+.view-travelreq-container {
+    padding: 20px;
+  }
+  
+  /* Styling for the table */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  /* Header row styling */
+  .table th {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Alternate row background color for better readability */
+  .table tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  /* Styling for anchor links */
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Message for empty or no data */
+  .empty-message {
+    text-align: center;
+    padding: 20px;
+    color: #868e96;
+  }
+  
+  /* Bootstrap styling for buttons (if you uncomment the button in the future) */
+  /* button {
+    margin-top: 20px;
+  } */
+  

@@ -1,0 +1,39 @@
+
+<p>view-emp works!</p>
+
+<table class="table table-primary" >
+    <tr>
+        <td>EmployeeId</td>
+        <td>EmpFName</td>
+        <td>EmpLName</td>
+        <td>DOB</td>
+        <td>Address</td>
+        <td>Contact</td>
+        
+        <td>Detail</td>
+        <td>Edit</td>
+        <td>Delete</td>
+        
+    </tr>
+    <tr *ngFor="let g of lstEmp;">
+        <td>{{g.empId}}</td>
+        <td>{{g.empFirstName}}</td>
+        <td>{{g.empLastName}}</td>
+        <td>{{g.empDob}}</td>
+        <td>{{g.empAddress}}</td>
+        <td>{{g.empContact}}</td>
+        <td><a [routerLink]="['/detail/',g.empId]">Details</a></td>
+        <td><a [routerLink]="['/edit/',g.empId]">Edit</a></td>
+        <td><a [routerLink]="['/delete/',g.empId]">Delete</a></td>
+        
+    </tr>
+    <tr *ngIf="!lstEmp || lstEmp.length==0">
+        <td colspan="3">No Genre to Display</td>
+    </tr>
+    
+
+</table>
+<!-- <button (click)="getGenreById()">Refresh List</button> -->
+
+
+
